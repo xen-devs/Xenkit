@@ -58,7 +58,7 @@ const ${componentName}: React.FC<${componentName}Props> = ({ text }) => {
 export default ${componentName};
 `;
 
-const docsTemplate = `import ${componentName} from "../../../_components/${componentType}/${componentName}/${componentName}";
+const docsTemplate = `import ${componentName} from "@/app/_components/${componentType}/${componentName}/${componentName}";
 
 export default function ${componentName}Docs() {
   return <${componentName} />;

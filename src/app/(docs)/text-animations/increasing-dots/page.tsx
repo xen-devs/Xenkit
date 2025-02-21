@@ -1,5 +1,5 @@
 "use client"
-import IncreasingDots from "../../../_components/text-animations/IncreasingDots/IncreasingDots";
+import IncreasingDots from "@/app/_components/text-animations/IncreasingDots/IncreasingDots";
 
 export default function IncreasingDotsDocs() {
   return <IncreasingDots 
