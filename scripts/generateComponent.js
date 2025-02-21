@@ -33,7 +33,7 @@ console.log('componentNameLower: ', componentNameLower);
 console.log('kebabCaseName (for docs): ', kebabCaseName);
 
 const paths = {
-  components: path.join(__dirname, "../src/app/_components", componentType, componentName),
+  components: path.join(__dirname, "../src/app/_components", componentType, kebabCaseName),
   docs: path.join(__dirname, "../src/app/(docs)", componentType, kebabCaseName),
 };
 
@@ -58,7 +58,7 @@ const ${componentName}: React.FC<${componentName}Props> = ({ text }) => {
 export default ${componentName};
 `;
 
-const docsTemplate = `import ${componentName} from "@/app/_components/${componentType}/${componentName}/${componentName}";
+const docsTemplate = `import ${componentName} from "@/app/_components/${componentType}/${kebabCaseName}/${componentName}";
 
 export default function ${componentName}Docs() {
   return <${componentName} />;
