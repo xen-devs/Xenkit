@@ -2,11 +2,13 @@
   "name": "xenkit",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "new:component": "node scripts/generateComponent.js"
   },
   "dependencies": {
     "gsap": "^3.12.7",

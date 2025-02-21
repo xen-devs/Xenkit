@@ -1,13 +1,14 @@
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
+import React from "react";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
-interface TextAnimationProps {
+
+interface IncreasingDotsProps {
   word: string;
   repeat?: number;
   className?: string;
   duration?: number;
 }
-
 const generateWords = (word: string): string[] => {
   const words: string[] = [];
   const wordLength = word.length;
@@ -37,12 +38,12 @@ const generateWords = (word: string): string[] => {
   return words;
 };
 
-const IncreasingDots: React.FC<TextAnimationProps> = ({
+const IncreasingDots: React.FC<IncreasingDotsProps> = ({ 
   word,
   repeat = 3,
   className = "",
   duration = 0.15,
-}) => {
+ }) => {
   const textRef = useRef<HTMLHeadingElement | null>(null);
   const words = generateWords(word);
 
@@ -72,6 +73,7 @@ const IncreasingDots: React.FC<TextAnimationProps> = ({
         {words[0]}
       </h1>
   );
+
 };
 
 export default IncreasingDots;
