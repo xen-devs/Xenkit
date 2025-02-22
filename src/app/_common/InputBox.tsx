@@ -6,10 +6,19 @@ interface InputBoxProps {
   inputRef?: React.RefObject<HTMLInputElement>
   defaultValue?: string | number;
   onChange: ()=>void;
+    maxLength?: number;
 }
 
 const InputBox = forwardRef<HTMLInputElement, InputBoxProps>(
-    ({ placeholder, label,defaultValue,onChange }, ref) => {
+    ({ placeholder, label,defaultValue,onChange, maxLength=15}, ref) => {
+
+        const handleChange = (e:React.ChangeEvent<HTMLInputElement>) =>{
+            if(e.target.value.length >= maxLength){
+                e.preventDefault();
+                return;
+            }
+            onChange();
+        }
   return (
     <div className='flex flex-col'>
       {label ? <label className='text-lg mt-2 mb-1' htmlFor={label}>{label}</label> : null}
@@ -19,7 +28,7 @@ const InputBox = forwardRef<HTMLInputElement, InputBoxProps>(
         type='text'
         placeholder={placeholder}
         defaultValue={defaultValue}
-        onChange={onChange}
+        onChange={handleChange}
         className='w-80 border border-[#212121] p-2 rounded-lg bg-[#0a0a0a] shadow-md focus:outline-none active:outline-none'
       />
     </div>

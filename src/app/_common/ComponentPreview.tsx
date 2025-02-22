@@ -11,6 +11,7 @@ interface ComponentPreviewProps {
   code: string
   title: string
   importCode: string
+  maxLength?: number
 }
 
 export default function ComponentPreview ({
@@ -19,6 +20,7 @@ export default function ComponentPreview ({
   title,
   importCode,
   componentProps,
+  maxLength,
   setComponentProps
 }: ComponentPreviewProps) {
   const [activeTab, setActiveTab] = useState('Preview')
@@ -33,8 +35,8 @@ export default function ComponentPreview ({
   const handleInputChange = (key: string) => {
     const ref = inputRefs.current[key]
     if (ref.current) {
-      let val: string|number = ref.current.value;
-      if(!isNaN(Number(val)) && val.trim()!=='' ) {
+      let val: string | number = ref.current.value
+      if (!isNaN(Number(val)) && val.trim() !== '') {
         val = Number(val)
       }
       setComponentProps({
@@ -79,6 +81,7 @@ export default function ComponentPreview ({
                 label={key}
                 defaultValue={componentProps[key]}
                 onChange={() => handleInputChange(key)}
+                maxLength={maxLength}
               />
             )
         )}

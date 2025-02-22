@@ -30,6 +30,7 @@ export default function IncreasingDotsDocs() {
         component={<IncreasingDots {...componentProps} />}
         title="Increasing Dots"
         importCode="import IncreasingDots from 'xenkit/IncreasingDots'"
+        maxLength={15}
       />
 
       <div className="flex flex-col space-y-4">
