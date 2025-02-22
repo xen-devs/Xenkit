@@ -58,13 +58,44 @@ const ${componentName}: React.FC<${componentName}Props> = ({ text }) => {
 export default ${componentName};
 `;
 
-const docsTemplate = `import ${componentName} from "@/app/_components/${componentType}/${kebabCaseName}/${componentName}";
+const docsTemplate1 =
+`
+"use client";
+import ${componentName} from "@/app/_components/${componentType}/${componentNameLower}/${componentName}";
+import ComponentPreview from "@/app/_common/ComponentPreview";
+import { useState } from "react";
 
 export default function ${componentName}Docs() {
-  return <${componentName} />;
+  const [componentProps, setComponentProps] = useState({
+    text: "Hello"
+  });`;
+
+const docsTemplate2 =
+  "\nconst usage =`<"+`${componentName} `+ 
+  "${Object.entries(componentProps)"+
+    ".map(([key, value]) =>"+"\n"+
+      "typeof value === \"string\" ?"+ "`${key}=\"${value}\"` : `${key}={${value}}`"
+    +")"+
+    ".join(\"\\n  \")}" 
+  +"/>;`\n"+
+  `
+  return (
+    <div className=\"p-4\">
+      <ComponentPreview
+        code={usage}
+        componentProps={componentProps}
+        setComponentProps={setComponentProps}
+        component={<${componentName} {...componentProps} />}
+        title=\"${componentName}\"
+        importCode=\"import ${componentName} from \'xenkit/${componentName}'\"
+        maxLength={15}
+      />
+    </div>
+  );
 }
 `;
 
+const docsTemplate = docsTemplate1 + docsTemplate2;
 async function createComponentFiles() {
   const needCSS = await askQuestion("Do you want to create a CSS file? (yes/no): ");
 
