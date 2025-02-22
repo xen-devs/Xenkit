@@ -3,7 +3,7 @@ import React, { useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import SidebarData from '../data/test.json'
+import SidebarData from '../data/sidebar.json'
 
 function Sidebar ({ isOpen }: { isOpen: boolean }) {
   const pathname = usePathname()
@@ -27,8 +27,8 @@ function Sidebar ({ isOpen }: { isOpen: boolean }) {
                       href={`/${sub.path}`}
                       className={`block px-2 rounded-md transition-all ${
                         pathname === `/${sub.path}`
-                          ? 'text-white'
-                          : 'text-[#838383] hover:text-white'
+                          ? 'text-glow'
+                          : ''
                       }`}
                     >
                       {sub.name}
@@ -46,7 +46,7 @@ function Sidebar ({ isOpen }: { isOpen: boolean }) {
         {isOpen && (
           <motion.div
             ref={sidebarRef}
-            className='fixed left-0 top-16 h-[calc(100vh-4rem)] w-full bg-[#0a0a0a] text-white p-5 overflow-y-auto scrollbar-hide shadow-lg md:hidden'
+            className='fixed left-0 top-16 h-[calc(100vh-4rem)] w-full bg-[#0a0a0a] text-white p-5 overflow-y-auto scrollbar-hide shadow-lg md:hidden z-50'
             initial={{ x: -250 }}
             animate={{ x: 0 }}
             exit={{ x: -250 }}

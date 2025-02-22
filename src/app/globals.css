@@ -25,7 +25,7 @@ body {
 
 .menu-icon span {
   display: block;
-  height: 1.5px;
+  height: 2px;
   width: 100%;
   background-color: #d6d6d6;
   border-radius: 2px;
@@ -38,4 +38,9 @@ body {
 
 .menu-icon.open span:nth-child(2) {
   transform: rotate(-45deg) translate(4px, -4px);
+}
+
+
+.text-glow{
+  text-shadow: 0 0 5px #ecd608;
 }

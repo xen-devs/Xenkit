@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 function Navbar({ isOpen, toggleSidebar }: { isOpen: boolean; toggleSidebar: () => void }) {
   const router = useRouter();
   return (
-    <div className="fixed top-0 left-0 w-full bg-[#0a0a0a] text-white shadow-md py-4 px-5 flex items-center justify-between">
+    <div className="fixed top-0 left-0 w-full bg-[#0a0a0a] text-white py-4 px-5 flex items-center justify-between">
       <button onClick={() => router.push('/')} className="text-3xl font-bold">Xenkit</button>
       <div className="flex items-center gap-4">
         <a

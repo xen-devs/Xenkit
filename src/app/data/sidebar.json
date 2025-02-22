@@ -1,5 +1,15 @@
 [
   {
+    "name": "Background Effects",
+    "path": "background-effects",
+    "subcategories": [
+      {
+        "name": "Spotlight",
+        "path": "background-effects/spotlight"
+      }
+    ]
+  },
+  {
     "name": "Text Animations",
     "path": "text-animations",
     "subcategories": [
