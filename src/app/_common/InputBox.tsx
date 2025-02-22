@@ -2,7 +2,6 @@ import React, { forwardRef } from 'react'
 
 interface InputBoxProps {
   placeholder?: string
-  className?: string
   label?: string
   inputRef?: React.RefObject<HTMLInputElement>
   defaultValue?: string | number;
@@ -10,7 +9,7 @@ interface InputBoxProps {
 }
 
 const InputBox = forwardRef<HTMLInputElement, InputBoxProps>(
-    ({ placeholder, className, label,defaultValue,onChange }, ref) => {
+    ({ placeholder, label,defaultValue,onChange }, ref) => {
   return (
     <div className='flex flex-col'>
       {label ? <label className='text-lg mt-2 mb-1' htmlFor={label}>{label}</label> : null}
@@ -26,5 +25,7 @@ const InputBox = forwardRef<HTMLInputElement, InputBoxProps>(
     </div>
   )
 })
+
+InputBox.displayName = 'InputBox'
 
 export default InputBox

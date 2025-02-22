@@ -5,7 +5,7 @@ import Tab from './Tab'
 import InputBox from './InputBox'
 
 interface ComponentPreviewProps {
-  componentProps: any
+  componentProps: { [key: string]: any }
   setComponentProps: React.Dispatch<React.SetStateAction<any>>
   component: React.ReactNode
   code: string
