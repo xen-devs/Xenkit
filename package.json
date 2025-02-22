@@ -5,16 +5,19 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run generate-sidebar && next build",
     "start": "next start",
     "lint": "next lint",
-    "new:component": "node scripts/generateComponent.js"
+    "new:component": "node scripts/generateComponent.js",
+    "generate-sidebar": "node scripts/generateSidebar.js"
   },
   "dependencies": {
+    "framer-motion": "^12.4.7",
     "gsap": "^3.12.7",
     "next": "15.1.7",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwind-scrollbar-hide": "^2.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

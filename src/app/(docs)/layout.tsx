@@ -1,11 +1,16 @@
-import { ReactNode } from 'react'
+"use client"
+import { ReactNode, useState } from "react";
+import Sidebar from "../_common/Sidebar";
+import Navbar from "../_common/Navbar";
 
-export default function DocsLayout ({ children }: { children: ReactNode }) {
+export default function DocsLayout({ children }: { children: ReactNode }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div>
-      {/* Navbar */}
-      {/* Sidebar */}
-      <div className='flex-1 p-4'>{children}</div>
-    </div>
-  )
+    <>
+      <Navbar isOpen={isOpen} toggleSidebar={() => setIsOpen(!isOpen)} />
+      <Sidebar isOpen={isOpen}  />
+      <main className="pt-16 md:pl-64">{children}</main>
+    </>
+  );
 }

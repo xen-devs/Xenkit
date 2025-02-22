@@ -1,0 +1,165 @@
+[
+    {
+      "name": "Text Animations",
+      "path": "text-animations",
+      "subcategories": [
+        {
+          "name": "Increasing Dots",
+          "path": "text-animations/increasing-dots"
+        },
+        {
+          "name": "Wave Text",
+          "path": "text-animations/wave-text"
+        },
+        {
+          "name": "Typing Effect",
+          "path": "text-animations/typing-effect"
+        },
+        {
+          "name": "Wave Text",
+          "path": "text-animations/wave-text"
+        },
+        {
+          "name": "Typing Effect",
+          "path": "text-animations/typing-effect"
+        },
+        {
+          "name": "Wave Text",
+          "path": "text-animations/wave-text"
+        },
+        {
+          "name": "Typing Effect",
+          "path": "text-animations/typing-effect"
+        },
+        {
+          "name": "Wave Text",
+          "path": "text-animations/wave-text"
+        },
+        {
+          "name": "Typing Effect",
+          "path": "text-animations/typing-effect"
+        },
+        {
+          "name": "Wave Text",
+          "path": "text-animations/wave-text"
+        },
+        {
+          "name": "Typing Effect",
+          "path": "text-animations/typing-effect"
+        },
+        {
+          "name": "Wave Text",
+          "path": "text-animations/wave-text"
+        },
+        {
+          "name": "Typing Effect",
+          "path": "text-animations/typing-effect"
+        },
+        {
+          "name": "Wave Text",
+          "path": "text-animations/wave-text"
+        },
+        {
+          "name": "Typing Effect",
+          "path": "text-animations/typing-effect"
+        },
+        {
+          "name": "Wave Text",
+          "path": "text-animations/wave-text"
+        },
+        {
+          "name": "Typing Effect",
+          "path": "text-animations/typing-effect"
+        },
+        {
+          "name": "Wave Text",
+          "path": "text-animations/wave-text"
+        },
+        {
+          "name": "Typing Effect",
+          "path": "text-animations/typing-effect"
+        },
+        {
+          "name": "Wave Text",
+          "path": "text-animations/wave-text"
+        },
+        {
+          "name": "Glitch Effect",
+          "path": "text-animations/glitch-effect"
+        }
+      ]
+    },
+    {
+      "name": "Background Animations",
+      "path": "background-animations",
+      "subcategories": [
+        {
+          "name": "Particle Effect",
+          "path": "background-animations/particle-effect"
+        },
+        {
+          "name": "Gradient Shift",
+          "path": "background-animations/gradient-shift"
+        },
+        {
+          "name": "Moving Waves",
+          "path": "background-animations/moving-waves"
+        }
+      ]
+    },
+    {
+      "name": "Button Animations",
+      "path": "button-animations",
+      "subcategories": [
+        {
+          "name": "Hover Glow",
+          "path": "button-animations/hover-glow"
+        },
+        {
+          "name": "Ripple Effect",
+          "path": "button-animations/ripple-effect"
+        },
+        {
+          "name": "Scale On Click",
+          "path": "button-animations/scale-on-click"
+        }
+      ]
+    },
+    {
+      "name": "Card Animations",
+      "path": "card-animations",
+      "subcategories": [
+        {
+          "name": "Flip Card",
+          "path": "card-animations/flip-card"
+        },
+        {
+          "name": "Hover Lift",
+          "path": "card-animations/hover-lift"
+        },
+        {
+          "name": "Expand On Hover",
+          "path": "card-animations/expand-on-hover"
+        }
+      ]
+    },
+    {
+      "name": "Card Animatibons",
+      "path": "card-animatibons",
+      "subcategories": [
+        {
+          "name": "Flip Card",
+          "path": "card-animations/flip-card"
+        },
+        {
+          "name": "Hover Lift",
+          "path": "card-animations/hover-lift"
+        },
+        {
+          "name": "Expand On Hover",
+          "path": "card-animations/expand-on-hover"
+        }
+      ]
+    }
+  ]
+  

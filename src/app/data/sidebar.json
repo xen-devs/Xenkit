@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Text Animations",
+    "path": "text-animations",
+    "subcategories": [
+      {
+        "name": "Increasing Dots",
+        "path": "text-animations/increasing-dots"
+      }
+    ]
+  }
+]
