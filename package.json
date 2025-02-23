@@ -12,8 +12,10 @@
     "generate-sidebar": "node scripts/generateSidebar.js"
   },
   "dependencies": {
+    "@types/inquirer": "^9.0.7",
     "framer-motion": "^12.4.7",
     "gsap": "^3.12.7",
+    "inquirer": "^12.4.2",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

@@ -1,5 +1,19 @@
 [
   {
+    "name": "Backgroud Effects",
+    "path": "backgroud-effects",
+    "subcategories": [
+      {
+        "name": "Bouncing Gradient",
+        "path": "backgroud-effects/bouncing-gradient"
+      },
+      {
+        "name": "Spotlight",
+        "path": "backgroud-effects/spotlight"
+      }
+    ]
+  },
+  {
     "name": "Text Animations",
     "path": "text-animations",
     "subcategories": [
