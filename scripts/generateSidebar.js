@@ -2,6 +2,13 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
+export function formatName(name) {
+  return name
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
 export default async function generateSidebar() {
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
@@ -19,7 +26,6 @@ export default async function generateSidebar() {
       if (entry.isDirectory()) {
         const subcategories = scanDir(fullPath, newPath);
         //   console.log('subcategories: ', subcategories);
-
         results.push({
           name: formatName(entry.name),
           path: newPath,
@@ -36,13 +42,6 @@ export default async function generateSidebar() {
     return results;
   }
 
-  function formatName(name) {
-    return name
-      .split("-")
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ");
-  }
-
   const sidebarData = scanDir(docsFolder);
   const outputDir = path.join(__dirname, "../src/app/data");
   if (!fs.existsSync(outputDir)) {
@@ -55,6 +54,5 @@ export default async function generateSidebar() {
   console.log(`Sidebar data generated at ${outputFile}`);
 
 }
-
 
 generateSidebar();

@@ -4,7 +4,7 @@ import process from "process";
 import readline from "readline";
 import inquirer from 'inquirer';
 import { fileURLToPath } from "url";
-import generateSidebar from "./generateSidebar.js";
+import generateSidebar, {formatName} from "./generateSidebar.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -129,7 +129,7 @@ export default function ${componentName}Docs() {
         componentProps={componentProps}
         setComponentProps={setComponentProps}
         component={<${componentName} {...componentProps} />}
-        title="${componentName}"
+        title="${formatName(kebabCaseName)}"
         importCode="import ${componentName} from 'xenkit/${componentName}'"
         maxLength={15}
       />

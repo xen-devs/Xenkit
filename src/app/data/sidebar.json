@@ -14,6 +14,16 @@
     ]
   },
   {
+    "name": "Boxes",
+    "path": "boxes",
+    "subcategories": [
+      {
+        "name": "Accordian Card",
+        "path": "boxes/accordian-card"
+      }
+    ]
+  },
+  {
     "name": "Text Animations",
     "path": "text-animations",
     "subcategories": [
