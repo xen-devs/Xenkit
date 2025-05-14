@@ -1,25 +1,11 @@
 [
   {
-    "name": "Backgroud Effects",
-    "path": "backgroud-effects",
+    "name": "Badge",
+    "path": "Badge",
     "subcategories": [
       {
-        "name": "Bouncing Gradient",
-        "path": "backgroud-effects/bouncing-gradient"
-      },
-      {
-        "name": "Spotlight",
-        "path": "backgroud-effects/spotlight"
-      }
-    ]
-  },
-  {
-    "name": "Boxes",
-    "path": "boxes",
-    "subcategories": [
-      {
-        "name": "Accordian Card",
-        "path": "boxes/accordian-card"
+        "name": "Avatars",
+        "path": "Badge/avatars"
       }
     ]
   },

@@ -31,11 +31,24 @@ export default function IncreasingDotsDocs() {
         title="Increasing Dots"
         importCode="import IncreasingDots from 'xenkit/IncreasingDots'"
         maxLength={15}
-      />
+        propControls={
+          {
+            word: {
+              type: "text",
+            },
+            repeat: {
+              type: "number",
+            },
+            duration: {
+              type: "number",
+            },
+            className: {
+              type: "hidden",
+            },
+          }
 
-      <div className="flex flex-col space-y-4">
-        
-      </div> 
+        }
+      />
     </div>
   );
 }
