@@ -43,8 +43,6 @@ export default function ComponentPreview ({
     const ref = inputRefs.current[key]
     if (ref.current) {
       let val: string | number | string[] = ref.current.value
-      const control = propControls?.[key]
-
       if (!isNaN(Number(val)) && val.trim() !== '') {
         val = Number(val)
       }
