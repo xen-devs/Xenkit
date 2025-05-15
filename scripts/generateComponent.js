@@ -132,6 +132,13 @@ export default function ${componentName}Docs() {
         title="${formatName(kebabCaseName)}"
         importCode="import ${componentName} from 'xenkit/${componentName}'"
         maxLength={15}
+        propControls={
+          {
+            text: {
+              type: "text"
+            }
+          }
+        }
       />
     </div>
   );

@@ -14,8 +14,9 @@ interface ComponentPreviewProps {
   maxLength?: number
   propControls?: {
     [key: string]: {
-      type: 'text' | 'number' | 'select' | 'hidden'
+      type: 'text' | 'number' | 'select' | 'hidden'| 'note'
       options?: string[] // only for select
+      noteText?: string // only for note
     }
   }
 }
@@ -79,10 +80,18 @@ export default function ComponentPreview ({
       )}
       <div>
         <h1 className='text-2xl font-semibold mt-2'>Customize</h1>
-        {Object.keys(componentProps).map(key => {
-          const control = propControls?.[key]
+        {Object.entries(propControls || {}).map(([key, control]) => {
+          // console.log('control: ', control);
 
           if (control?.type === 'hidden' || key === 'className') return null
+
+          if(control?.type === 'note') {
+            return (
+              <div key={key} className='mb-4 border border-[#333] p-4 rounded bg-[#111]'>
+                <p className='text-grey-500'>Note: {control.noteText}</p>
+              </div>
+            )
+          }
 
           if (control?.type === 'select') {
             return (

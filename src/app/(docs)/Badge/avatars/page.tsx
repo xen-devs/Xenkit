@@ -47,7 +47,11 @@ export default function AvatarsDocs () {
           },
           images: {
             type: 'hidden'
-          }
+          },
+          note: {
+            type: 'note',
+            noteText: 'This avatar animation uses hover effects. For the best experience, please view it on a laptop or desktop.'
+          },
         }}
       />
     </div>
