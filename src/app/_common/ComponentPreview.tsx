@@ -12,6 +12,8 @@ interface ComponentPreviewProps {
   title: string
   importCode: string
   maxLength?: number
+  isVerticallyCentered?: boolean
+  isHorizontallyCentered?: boolean
   propControls?: {
     [key: string]: {
       type: 'text' | 'number' | 'select' | 'hidden'| 'note'
@@ -29,6 +31,8 @@ export default function ComponentPreview ({
   componentProps,
   maxLength,
   setComponentProps,
+  isVerticallyCentered,
+  isHorizontallyCentered,
   propControls
 }: ComponentPreviewProps) {
   const [activeTab, setActiveTab] = useState('Preview')
@@ -65,10 +69,19 @@ export default function ComponentPreview ({
       </div>
 
       {activeTab === 'Preview' ? (
-        <div>
-          <div className='flex justify-center items-center h-[400px] border border-[#212121] p-4 rounded-lg bg-[#0a0a0a] shadow-md'>
-            {component}
-          </div>
+        <div
+          className={`
+            flex
+            ${isHorizontallyCentered ? 'justify-center' : ''}
+            ${isVerticallyCentered ? 'items-center' : ''}
+            min-h-[400px]
+            border border-[#212121]
+            p-4 rounded-lg
+            bg-[#0a0a0a]
+            shadow-md
+          `}
+        >
+          {component}
         </div>
       ) : (
         <div>

@@ -40,6 +40,8 @@ export default function AvatarsDocs () {
         title='Avatars'
         importCode="import Avatars from 'xenkit/Avatars'"
         maxLength={15}
+        isVerticallyCentered={true}
+        isHorizontallyCentered={true}
         propControls={{
           variant: {
             type: 'select',

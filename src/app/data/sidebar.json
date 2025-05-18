@@ -10,12 +10,16 @@
     ]
   },
   {
-    "name": "Text Animations",
-    "path": "text-animations",
+    "name": "Loading Animations",
+    "path": "loading-animations",
     "subcategories": [
       {
+        "name": "Dash Trail",
+        "path": "loading-animations/dash-trail"
+      },
+      {
         "name": "Increasing Dots",
-        "path": "text-animations/increasing-dots"
+        "path": "loading-animations/increasing-dots"
       }
     ]
   }
