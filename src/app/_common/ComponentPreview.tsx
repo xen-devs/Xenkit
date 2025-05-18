@@ -16,9 +16,10 @@ interface ComponentPreviewProps {
   isHorizontallyCentered?: boolean
   propControls?: {
     [key: string]: {
-      type: 'text' | 'number' | 'select' | 'hidden'| 'note'
+      type: 'text' | 'number' | 'select' | 'hidden'| 'note' |'color' | 'array'
       options?: string[] // only for select
       noteText?: string // only for note
+      defaultValue?: string | number | string[] // only for array
     }
   }
 }
@@ -57,6 +58,8 @@ export default function ComponentPreview ({
       }))
     }
   }
+
+  
   return (
     <div>
       <div className='flex justify-between items-center flex-wrap'>
@@ -102,6 +105,25 @@ export default function ComponentPreview ({
             return (
               <div key={key} className='mb-4 border border-[#333] p-4 rounded bg-[#111]'>
                 <p className='text-grey-500'>Note: {control.noteText}</p>
+              </div>
+            )
+          }
+
+          if (control?.type === 'color') {
+            return (
+              <div key={key} className='mb-4 mt-2'>
+                <label className='block mb-1 font-medium'>{key}</label>
+                <input
+                  type='color'
+                  value={`${componentProps[key]}`}
+                  onChange={e =>
+                    setComponentProps((prev: typeof componentProps) => ({
+                      ...prev,
+                      [key]: e.target.value
+                    }))
+                  }
+                  className='bg-[#111] text-white p-2 rounded border border-[#333] outline-none'
+                />
               </div>
             )
           }

@@ -116,9 +116,23 @@ export default function ${componentName}Docs() {
 
   const usage = \`<${componentName} 
   \${Object.entries(componentProps)
-    .map(([key, value]) =>
-      typeof value === "string" ? \`\${key}="\${value}"\` : \`\${key}={\${value}}\`
-    )
+    .map(([key, value]) =>{
+      if ( typeof value === "string" ) {
+        return \`\${key}="\${value}"\`;
+      } 
+      else if (Array.isArray(value)) {
+        return \`\${key}={\${JSON.stringify(value)}}\`
+      }
+      else if (typeof value === "object") {
+        return \`\${key}={\${JSON.stringify(value)}}\`
+      } 
+      else if (typeof value === "boolean") {
+        return \`\${key}={\${value}}\`
+      }
+      else {
+        \`\${key}={\${value}}\`
+      }
+    })
     .join("\\n  ")} 
 />;\`;
 

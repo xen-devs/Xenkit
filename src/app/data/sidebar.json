@@ -22,5 +22,15 @@
         "path": "loading-animations/increasing-dots"
       }
     ]
+  },
+  {
+    "name": "Text Animations",
+    "path": "text-animations",
+    "subcategories": [
+      {
+        "name": "Rotating Text",
+        "path": "text-animations/rotating-text"
+      }
+    ]
   }
 ]
