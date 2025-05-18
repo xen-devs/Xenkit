@@ -10,9 +10,9 @@ interface DashTrailProps {
 
 const DashTrail: React.FC<DashTrailProps> = ({ text,repeat,duration,className }) => {
   function dashLoading (word:string) {
-    let pattern: string[][] = []
+    const pattern: string[][] = []
     let tempWord = word + '____'
-    let forward: string[] = []
+    const forward: string[] = []
     for (let i = 0; i < 5; i++) {
       forward.push(tempWord)
       tempWord = tempWord.slice(0, tempWord.length - 1)
@@ -21,7 +21,7 @@ const DashTrail: React.FC<DashTrailProps> = ({ text,repeat,duration,className })
 
     pattern.push([...forward])
     forward.pop()
-    let backword = [...forward].reverse()
+    const backword = [...forward].reverse()
     pattern.push(backword)
 
 
@@ -61,7 +61,6 @@ const DashTrail: React.FC<DashTrailProps> = ({ text,repeat,duration,className })
     timeline.play();
     return () => {
       timeline.kill();
-      if (textRef.current) textRef.current.innerHTML = allWords[0];
     };
   }, [allWords, repeat, duration]);
 
