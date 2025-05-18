@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import SidebarData from '../data/sidebar.json'
 
-function Sidebar ({ isOpen }: { isOpen: boolean }) {
+function Sidebar ({ isOpen,toggleSidebar  }: { isOpen: boolean,toggleSidebar:()=>void }) {
   const pathname = usePathname()
   const sidebarRef = useRef<HTMLDivElement>(null)
 
@@ -42,18 +42,16 @@ function Sidebar ({ isOpen }: { isOpen: boolean }) {
       </div>
 
       {/* Mobile Menue */}
-      <AnimatePresence>
+      <AnimatePresence mode='wait'>
         {isOpen && (
           <motion.div
             ref={sidebarRef}
             className='fixed left-0 top-16 h-[calc(100vh-4rem)] w-full bg-[#0a0a0a] text-white p-5 overflow-y-auto scrollbar-hide shadow-lg md:hidden z-50'
             initial={{ x: -250 }}
             animate={{ x: 0 }}
-            exit={{ x: -250 }}
-            transition={{
-              duration: 0.3,
-              ease: 'easeOut'
-            }}
+            exit={{ x: -250, opacity: 0, transition: { duration: 0.2 } }}
+            transition={{ duration: 0.2, ease: 'easeOut' }}
+            style={{ willChange: 'transform' }}
           >
             <ul className='space-y-3'>
               {SidebarData.map(category => (
@@ -71,6 +69,7 @@ function Sidebar ({ isOpen }: { isOpen: boolean }) {
                       >
                         <Link
                           href={`/${sub.path}`}
+                          onClick={toggleSidebar}
                           className={`block px-2 rounded-md transition-all ${
                             pathname === `/${sub.path}`
                               ? 'text-white'
