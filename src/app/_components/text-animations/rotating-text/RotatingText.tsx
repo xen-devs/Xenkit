@@ -14,7 +14,7 @@ interface RotatingTextProps {
 const RotatingText: React.FC<RotatingTextProps> = ({
   constantText,
   rotatingWords,
-  className,
+  className = "sm:text-4xl text-xl",
   backGroundColor = '#94a3b8',
   textColor = '#000',
   rotateInterval = 900,

@@ -14,6 +14,10 @@
     "path": "loading-animations",
     "subcategories": [
       {
+        "name": "Arrow Drift",
+        "path": "loading-animations/arrow-drift"
+      },
+      {
         "name": "Dash Trail",
         "path": "loading-animations/dash-trail"
       },

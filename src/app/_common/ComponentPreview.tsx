@@ -152,11 +152,15 @@ export default function ComponentPreview ({
             )
           }
 
+
+          // make the input box work both ofr umber & string
+
           return (
             <InputBox
               key={key}
               ref={inputRefs.current[key]}
               label={key}
+              type={control?.type === 'number' ? 'number' : 'text'}
               defaultValue={componentProps[key]}
               onChange={() => handleInputChange(key)}
               maxLength={maxLength}

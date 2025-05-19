@@ -15,7 +15,7 @@ export default function RotatingTextDocs() {
   }>({
     constantText:"Follow on",
     rotatingWords: ["Twitter", "Instagram", "Linkedln", "Github" ,"Facebook"],
-    className:"text-4xl",
+    className:"sm:text-4xl text-2xl",
     rotateInterval: 900,
     animationDuration: 0.5,
     backGroundColor: "#94a3b8",

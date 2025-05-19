@@ -7,10 +7,11 @@ interface InputBoxProps {
   defaultValue?: string | number;
   onChange: ()=>void;
     maxLength?: number;
+    type?: string;
 }
 
 const InputBox = forwardRef<HTMLInputElement, InputBoxProps>(
-    ({ placeholder, label,defaultValue,onChange, maxLength=15}, ref) => {
+    ({ placeholder, label,defaultValue,onChange, maxLength=15,type="text"}, ref) => {
 
         const handleChange = (e:React.ChangeEvent<HTMLInputElement>) =>{
             if(e.target.value.length >= maxLength){
@@ -25,7 +26,7 @@ const InputBox = forwardRef<HTMLInputElement, InputBoxProps>(
       <input
         id={label}
         ref={ref}
-        type='text'
+        type={type}
         placeholder={placeholder}
         defaultValue={defaultValue}
         onChange={handleChange}

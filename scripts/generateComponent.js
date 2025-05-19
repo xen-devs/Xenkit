@@ -130,7 +130,7 @@ export default function ${componentName}Docs() {
         return \`\${key}={\${value}}\`
       }
       else {
-        \`\${key}={\${value}}\`
+        return \`\${key}={\${value}}\`
       }
     })
     .join("\\n  ")} 
