@@ -17,15 +17,15 @@ const ArrowDrift: React.FC<ArrowDriftProps> = ({
   duration = 0.25
 }) => {
   function arrowShifting (word: string, delimiter: string) {
-    let pattern = []
+    const pattern = []
     word = delimiter + word
     pattern.push(word)
     for (let i = 0; i < word.length - 2; i++) {
-      let last = word[word.length - 1]
+      const last = word[word.length - 1]
       word = last + word.slice(0, word.length - 1)
       pattern.push(word)
     }
-    console.log('pattern: ', pattern)
+    // console.log('pattern: ', pattern)
     return pattern
   }
   const textRef = useRef<HTMLHeadingElement | null>(null)
