@@ -10,6 +10,16 @@
     ]
   },
   {
+    "name": "Components",
+    "path": "Components",
+    "subcategories": [
+      {
+        "name": "Spotlight Card",
+        "path": "Components/spotlight-card"
+      }
+    ]
+  },
+  {
     "name": "Loading Animations",
     "path": "loading-animations",
     "subcategories": [
