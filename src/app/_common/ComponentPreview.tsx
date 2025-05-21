@@ -16,7 +16,7 @@ interface ComponentPreviewProps {
   isHorizontallyCentered?: boolean
   propControls?: {
     [key: string]: {
-      type: 'text' | 'number' | 'select' | 'hidden'| 'note' |'color' | 'array'
+      type: 'text' | 'number' | 'select' | 'hidden'| 'note' |'color' | 'array' | 'boolean'
       options?: string[] // only for select
       noteText?: string // only for note
       defaultValue?: string | number | string[] // only for array
@@ -148,6 +148,24 @@ export default function ComponentPreview ({
                     </option>
                   ))}
                 </select>
+              </div>
+            )
+          }
+          if(control?.type=='boolean') {
+            return (
+              <div key={key} className='mb-4 flex items-center gap-2'>
+                <label className='block mb-1 font-medium'>{key}</label>
+                <input
+                  type='checkbox'
+                  checked={componentProps[key]}
+                  onChange={e =>
+                    setComponentProps((prev: typeof componentProps) => ({
+                      ...prev,
+                      [key]: e.target.checked
+                    }))
+                  }
+                  className='bg-[#111] text-white p-2 rounded border border-[#333] outline-none'
+                />
               </div>
             )
           }

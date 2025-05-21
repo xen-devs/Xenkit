@@ -16,6 +16,10 @@
       {
         "name": "Spotlight Card",
         "path": "Components/spotlight-card"
+      },
+      {
+        "name": "Tooltip",
+        "path": "Components/tooltip"
       }
     ]
   },
