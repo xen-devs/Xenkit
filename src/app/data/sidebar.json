@@ -46,6 +46,10 @@
     "path": "text-animations",
     "subcategories": [
       {
+        "name": "Blur Text",
+        "path": "text-animations/blur-text"
+      },
+      {
         "name": "Rotating Text",
         "path": "text-animations/rotating-text"
       }

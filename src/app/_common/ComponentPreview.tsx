@@ -106,7 +106,7 @@ export default function ComponentPreview ({
 
           if(control?.type === 'note') {
             return (
-              <div key={key} className='mb-4 border border-[#333] p-4 rounded bg-[#111]'>
+              <div key={key} className='mt-4 border border-[#333] p-4 rounded bg-[#111]'>
                 <p className='text-grey-500'>Note: {control.noteText}</p>
               </div>
             )
@@ -114,7 +114,7 @@ export default function ComponentPreview ({
 
           if (control?.type === 'color') {
             return (
-              <div key={key} className='mb-4 mt-2'>
+              <div key={key} className='mt-2'>
                 <label className='block mb-1 font-medium'>{control.label? control.label:key}</label>
                 <input
                   type='color'
@@ -133,7 +133,7 @@ export default function ComponentPreview ({
 
           if (control?.type === 'select') {
             return (
-              <div key={key} className='mb-4 mt-2'>
+              <div key={key} className='mt-2'>
                 <label className='block mb-1 font-medium'>{control.label? control.label:key}</label>
                 <select
                   value={componentProps[key]}
@@ -156,7 +156,7 @@ export default function ComponentPreview ({
           }
           if(control?.type=='boolean') {
             return (
-              <div key={key} className='mb-4 flex items-center gap-2'>
+              <div key={key} className='mt-2 flex items-center gap-2'>
                 <label className='block mb-1 font-medium'>{control.label? control.label:key}</label>
                 <input
                   type='checkbox'
