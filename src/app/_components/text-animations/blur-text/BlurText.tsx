@@ -20,12 +20,12 @@ const BlurText: React.FC<BlurTextProps> = ({
 }) => {
   const [allWords, setAllWords] = React.useState<string[]>([])
   function splitByWord (text: string) {
-    let allWords: string[] = text.split(' ')
+    const allWords: string[] = text.split(' ')
     setAllWords(allWords)
   }
   function splitByLetter (text: string) {
-    let allWords: string[] = text.split('')
-    setAllWords(allWords)
+    const allLetters: string[] = text.split('')
+    setAllWords(allLetters)
   }
   useEffect(() => {
     if (animateBy === 'words') {
