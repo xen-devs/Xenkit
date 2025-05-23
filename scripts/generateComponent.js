@@ -149,7 +149,8 @@ export default function ${componentName}Docs() {
         propControls={
           {
             text: {
-              type: "text"
+              type: "text",
+              label: "Text"
             }
           }
         }

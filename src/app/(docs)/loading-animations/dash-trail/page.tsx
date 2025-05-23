@@ -35,13 +35,21 @@ export default function DashTrailDocs() {
         propControls={
           {
             text: {
-              type: "text"
+              type: "text",
+              label: "Text",
             },
             duration:{
-              type:"number"
+              type:"number",
+              label:"Duration",
+              min:0.1,
+              max:1,
+              step:0.1,
             },
             repeat:{
-              type:"number"
+              type:"number",
+              label:"Repeat",
+              min:-1,
+              max:10,
             }
           }
         }

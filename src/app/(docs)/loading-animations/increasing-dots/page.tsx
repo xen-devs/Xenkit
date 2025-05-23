@@ -38,12 +38,23 @@ export default function IncreasingDotsDocs() {
           {
             word: {
               type: "text",
+              label: "Text",
+              min:3,
+              max: 15,
             },
             repeat: {
               type: "number",
+              label: "Repeat",
+              min: -1,
+              max: 3,
+              step: 1,
             },
             duration: {
               type: "number",
+              label: "Duration",
+              min: 0.1,
+              max: 1,
+              step: 0.05,
             },
             className: {
               type: "hidden",

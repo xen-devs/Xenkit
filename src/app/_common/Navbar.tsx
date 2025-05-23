@@ -10,7 +10,7 @@ function Navbar({ isOpen, toggleSidebar }: { isOpen: boolean; toggleSidebar: () 
       <div className="flex items-center gap-4">
         <a
           href="https://github.com/xen-devs/Xenkit"
-          className="hidden md:block text-[#d5d5d5] border-[#535353] hover:shadow-[0_0_10px_#535353] text-lg rounded-md px-2.5 border hover:backdrop-brightness-50 hover:drop-shadow-2xl transition duration-300"
+          className='hidden md:block  text-md bg-gray-800 text-white p-2 py-1 rounded-lg border border-gray-600 shadow-md transition duration-300'
         >
           Contribute
         </a>

@@ -72,24 +72,30 @@ export default function TooltipDocs() {
         propControls={
           {
             text: {
-              type: "text"
+              type: "text",
+              label:"Text"
             },
             showToolTip: {
               type: "select",
               options: ["On Hover", "On Click"],
+              label:"Show Tooltip"
             },
             position: {
               type: "select",
               options: ["top", "bottom", "left", "right"],
+              label:"Position"
             },
             arrow: {
               type: "boolean",
+              label:"Show Arrow"
             },
             backgroundColor: {
               type: "color",
+              label:"Background Color"
             },
             textColor: {
               type: "color",
+              label:"Text Color"
             },
           }
         }
