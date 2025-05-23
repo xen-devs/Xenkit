@@ -20,6 +20,10 @@ interface ComponentPreviewProps {
       options?: string[] // only for select
       noteText?: string // only for note
       defaultValue?: string | number | string[] // only for array
+      label?:string
+      min?: number
+      max?: number
+      step?: number
     }
   }
 }
@@ -30,7 +34,6 @@ export default function ComponentPreview ({
   title,
   importCode,
   componentProps,
-  maxLength,
   setComponentProps,
   isVerticallyCentered,
   isHorizontallyCentered,
@@ -112,7 +115,7 @@ export default function ComponentPreview ({
           if (control?.type === 'color') {
             return (
               <div key={key} className='mb-4 mt-2'>
-                <label className='block mb-1 font-medium'>{key}</label>
+                <label className='block mb-1 font-medium'>{control.label? control.label:key}</label>
                 <input
                   type='color'
                   value={`${componentProps[key]}`}
@@ -130,8 +133,8 @@ export default function ComponentPreview ({
 
           if (control?.type === 'select') {
             return (
-              <div key={key} className='mb-4'>
-                <label className='block mb-1 font-medium'>{key}</label>
+              <div key={key} className='mb-4 mt-2'>
+                <label className='block mb-1 font-medium'>{control.label? control.label:key}</label>
                 <select
                   value={componentProps[key]}
                   onChange={e =>
@@ -154,7 +157,7 @@ export default function ComponentPreview ({
           if(control?.type=='boolean') {
             return (
               <div key={key} className='mb-4 flex items-center gap-2'>
-                <label className='block mb-1 font-medium'>{key}</label>
+                <label className='block mb-1 font-medium'>{control.label? control.label:key}</label>
                 <input
                   type='checkbox'
                   checked={componentProps[key]}
@@ -177,11 +180,13 @@ export default function ComponentPreview ({
             <InputBox
               key={key}
               ref={inputRefs.current[key]}
-              label={key}
+              label={control.label? control.label:key }
+              min={control?.min}
+              max={control?.max}
+              step={control?.step}
               type={control?.type === 'number' ? 'number' : 'text'}
               defaultValue={componentProps[key]}
               onChange={() => handleInputChange(key)}
-              maxLength={maxLength}
             />
           )
         })}

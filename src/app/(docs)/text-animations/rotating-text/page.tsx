@@ -51,20 +51,27 @@ export default function RotatingTextDocs() {
         isVerticallyCentered={true}
         propControls={
           {
-            className:{
-              type:"text"
-            },
             rotateInterval:{
               type:"number",
+              label:"Rotate Interval",
+              min:500,
+              max:5000,
+              step:100,
             },
             animationDuration:{
               type:"number",
+              label:"Animation Duration",
+              min:0.2,
+              max:0.8,
+              step:0.1,
             },
             backGroundColor:{
               type:"color",
+              label:"Background Color",
             },
             textColor:{
               type:"color",
+              label:"Text Color",
             },
 
           }

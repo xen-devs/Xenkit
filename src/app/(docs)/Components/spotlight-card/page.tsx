@@ -66,19 +66,24 @@ export default function SpotlightCardDocs () {
         isVerticallyCentered={true}
         propControls={{
           spotlightColor: {
-            type: 'color'
+            type: 'color',
+            label:"Spotlight Color"
           },
           cardBorderRadius: {
-            type: 'text'
+            type: 'text',
+            label:"Card Border Radius"
           },
           spotlightSize: {
-            type: 'text'
+            type: 'text',
+            label:"Spotlight Size"
           },
           cardBackgroundColor: {
-            type: 'color'
+            type: 'color',
+            label:"Card Background Color"
           },
           borderColor: {
-            type: 'color'
+            type: 'color',
+            label:"Border Color"
           },
           note: {
             type: 'note',

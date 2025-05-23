@@ -49,16 +49,30 @@ export default function ArrowDriftDocs() {
         propControls={
           {
             text: {
-              type: "text"
+              type: "text",
+              label: "Text",
+              min: 1,
+              max: 15,
             },
             duration:{
               type: "number",
+              label: "Duration",
+              min: 0,
+              max: 1,
+              step: 0.01,
             },
             repeat:{
               type: "number",
+              label: "Repeat",
+              min: -1,
+              max: 10,
+              step: 1,
             },
             delimiter:{
               type: "text",
+              label: "Delimiter",
+              min: 1,
+              max: 3,
             },
           }
         }

@@ -45,7 +45,8 @@ export default function AvatarsDocs () {
         propControls={{
           variant: {
             type: 'select',
-            options: ['raise', 'elastic', 'bounce']
+            options: ['raise', 'elastic', 'bounce'],
+            label:"Variant"
           },
           images: {
             type: 'hidden'
