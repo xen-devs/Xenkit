@@ -18,6 +18,10 @@
         "path": "Components/spotlight-card"
       },
       {
+        "name": "Tab Bar",
+        "path": "Components/tab-bar"
+      },
+      {
         "name": "Tooltip",
         "path": "Components/tooltip"
       }
