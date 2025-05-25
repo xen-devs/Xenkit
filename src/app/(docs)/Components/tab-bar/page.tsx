@@ -35,6 +35,9 @@ export default function TabBarDocs() {
       else if (typeof value === "boolean") {
         return `${key}={${value}}`
       }
+      else if( typeof value === "function") {
+        return `${key}={${value.toString()}}`
+      }
       else {
         return `${key}={${value}}`
       }
