@@ -54,6 +54,10 @@
         "path": "text-animations/blur-text"
       },
       {
+        "name": "Flip Text",
+        "path": "text-animations/flip-text"
+      },
+      {
         "name": "Rotating Text",
         "path": "text-animations/rotating-text"
       }
