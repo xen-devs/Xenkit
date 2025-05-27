@@ -82,35 +82,33 @@ export default function ComponentPreview ({
       </div>
 
       {activeTab === 'Preview' ? (
-        <div
-          className={`
+        <div className={`
           relative
           min-h-[400px]
+          ${isVerticallyCentered ? '' : 'max-h-[400px] overflow-y-auto'}
           border border-[#212121]
           p-4 rounded-lg
           bg-[#0a0a0a]
           shadow-md
-          overflow-x-auto
-        `}
-        >
-          <div
-            className={`
+          w-full
+          overflow-x-hidden
+        `}>
+          <div className={`
             ${isHorizontallyCentered ? 'flex justify-center' : ''}
             ${isVerticallyCentered ? 'flex items-center min-h-[400px]' : ''}
-            ${
-              isHorizontallyCentered || isVerticallyCentered
-                ? 'w-max mx-auto'
-                : ''
-            }
-          `}
-          >
-            <div
-              className={`
-              ${isHorizontallyCentered ? '' : 'min-w-full'}
+            w-full
+            max-w-full
+          `}>
+            <div className={`
+              ${isHorizontallyCentered ? '' : 'w-full'}
               ${isVerticallyCentered ? 'flex items-center' : ''}
-            `}
-            >
-              {component}
+              whitespace-normal
+              break-words
+              overflow-hidden
+            `}>
+              <div className='w-full max-w-full'>
+                {component}
+              </div>
             </div>
           </div>
         </div>
