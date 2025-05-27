@@ -39,7 +39,7 @@ const TabBar: React.FC<TabBarProps> = ({ tabs, activeTab, onTabChange }) => {
 
   return (
     <div
-      className='tabBar w-full scrollbar-hide'
+      className='tabBar w-full scrollbar-hide overflow-x-scroll sm:overflow-x-hidden'
       style={{
         scrollbarWidth: 'none',
         msOverflowStyle: 'none'

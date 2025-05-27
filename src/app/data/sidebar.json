@@ -54,6 +54,10 @@
         "path": "text-animations/blur-text"
       },
       {
+        "name": "Fade Text",
+        "path": "text-animations/fade-text"
+      },
+      {
         "name": "Flip Text",
         "path": "text-animations/flip-text"
       },
